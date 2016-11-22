@@ -1,0 +1,107 @@
+
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <stdlib.h>
+
+	using namespace std;
+
+void name_event();
+string name;
+
+
+int main()
+{
+	char Y, y, N, n;
+	char choice;
+	char serg_ans, serg_ans_2;
+	string Jorge, jorge;
+	string Sergio, sergio;
+	string Cody, cody;
+	string Rachel, rachel;
+	string Chico, chico;
+
+
+	cout << "***** Welcome to Jorge's Secret program! *****";
+adventure:
+	cout << "\nAre you ready to begin on your adventure? (Y or N) ";
+	cin >> choice;
+		switch (choice)
+		{
+		case 'Y':
+			cout << "\nGreat! Let us begin!\n";
+			break;
+		case 'y':
+			cout << "\nGreat! Let us begin!\n";
+			break;
+		case 'N':
+			cout << "What the hell man, why start the program if you're not ready?\n";
+			system("PAUSE");
+			system("CLS");
+			goto adventure;
+			break;
+		case 'n':
+			cout << "What the hell man, why start the program if you're not ready?\n";
+			system("PAUSE");
+			system("CLS");
+			goto adventure;
+			break;
+		default:
+			cout << "\nC'mon man, don't be a dick. Enter one of the two options.";
+		}
+
+		cout << "\nAlright then, let me introduce myself."
+			<< "\nMy name is Art. I am your phone's artifical intelligence."
+			<< "\nIn case you're wondering, the year is 2045 and it is the 29th year of Cyborg-God-Emperor Trump."
+			<< "\nLet's focus on you, though.\n"
+			<< "\nWhat is your name?";
+		cin >> name;
+
+		if (name == "Jorge" || name == "jorge")
+		{
+			cout << "\nAh, what a great name! You sound handsome, smart, and you must smell amazing. Great secret program by the way!\n";
+		}
+		else if (name == "Sergio" || name == "sergio") {
+			serg_easter_egg:
+			cout << "\n Whoa, nice name! You look smart. You don't happen to work at a kick ass bank do you? (Y or N)";
+			cin >> serg_ans;
+			switch (serg_ans) //This switch statement processes the easter egg for Sergio's bank choice. 
+			{
+			case 'Y':
+				cout << "\nNice, man! If it means anything coming from your phone. I know you'll do well! Anyways, lets move on.";
+				break;
+			case 'y':
+				cout << "\nNice, man! If it means anything coming from your phone. I know you'll do well! Anyways, lets move on.";
+				break;
+			case 'N':
+				cout << "\nWhy do you lie to me? Let's try that question again. Do you work at a bank? (Y or N)";
+				cin >> serg_ans_2;
+				if (serg_ans_2 == 'N' || serg_ans_2 == 'n') {
+					cout << "\n You lil' bitch. Are you trying to play games with me? You know what fine. You don't have to play this game. I'm exiting this program.";
+					system("PAUSE");
+					exit(1);
+				}
+				else {
+					cout << "\nSee? It's not so hard to tell the truth. I don't know why you'd lie to your phone anyway.";
+				}
+			case 'n':
+				cout << "\nWhy do you lie to me? Let's try that question again. Do you work at a bank? (Y or N)";
+				cin >> serg_ans_2;
+				if (serg_ans_2 == 'N' || serg_ans_2 == 'n') {
+					cout << "\n You lil' bitch. Are you trying to play games with me? You know what fine. You don't have to play this game. I'm exiting this program.";
+					system("PAUSE");
+					exit(1);
+				}
+				else {
+					cout << "\nSee? It's not so hard to tell the truth. I don't know why you'd lie to your phone anyway.";
+				}
+			default:
+				cout << "\nUgh. Just enter a valid input. Please.";
+				goto serg_easter_egg;
+			} //End of the switch statement for sergio's easter egg
+		} //End of the else-if for sergio statement
+		else if (name == "Cody" || name == "cody") {
+			cout << "/nWhat a great American name! That's a name our God-Emperor would be proud of! Keep making America great, Cody!";
+		}
+	} //End bracket for main()
+		
